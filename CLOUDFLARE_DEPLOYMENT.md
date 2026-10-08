@@ -118,3 +118,19 @@ URL: https://utkarsh-cdc-web.<your-subdomain>.workers.dev
 ```
 
 You can also bind your custom domain (e.g., `www.utkarshcdc.com`) in the Cloudflare Dashboard under **Workers & Pages > utkarsh-cdc-web > Settings > Domains & Routes**.
+
+---
+
+### Part 4: Cloudflare Pages (Git Integration) Build Settings
+
+If you connect your GitHub repository directly to **Cloudflare Pages**:
+
+1. **Framework Preset**: `Vite`
+2. **Build Command**: `npm run build`
+3. **Build Output Directory**: `dist`
+4. **Environment Variables**:
+   - `NODE_VERSION`: `22` or `24`
+
+#### Resolved: Bun Lockfile Version Compatibility
+- **Issue**: Cloudflare build environments running `bun@1.2.15` fail if a `bun.lock` with `"lockfileVersion": 2` is committed (`UnknownLockfileVersion: failed to parse lockfile`).
+- **Fix Applied**: `bun.lock` has been removed and replaced with standard `package-lock.json`. The build system will now cleanly install dependencies via `npm ci` without any version lock errors.
