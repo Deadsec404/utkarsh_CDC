@@ -1,0 +1,115 @@
+# ==============================================================================
+# ROBOTS.TXT FOR UTKARSH CHILD DEVELOPMENT CENTRE
+# Website: https://utkarshcdc.com
+# Location: Bhandup (East), Mumbai, Maharashtra 400042, India
+# Description: Official robots directives for Search Engines and AI Crawlers
+# ==============================================================================
+# 
+# HOW TO UPDATE LATER:
+# 1. To add a new disallow path (e.g., /admin/ or /private/), add:
+#    Disallow: /admin/
+# 2. To change or add sitemaps, update or append to the "Sitemap:" line below.
+# 3. Keep "Allow: /" so Google, Bing, and AI crawlers can index your full site.
+# ==============================================================================
+
+User-agent: *
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+# Explicit rules for major search engines
+User-agent: Googlebot
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: Google-InspectionTool
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: Bingbot
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: Applebot
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: DuckDuckBot
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: Yandex
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: Baiduspider
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+# Explicit permissions for AI Search Engines & AI Assistants
+# (Allows AI assistants like ChatGPT, Perplexity, Claude & Gemini to cite Utkarsh CDC accurately)
+User-agent: GPTBot
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: ChatGPT-User
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: PerplexityBot
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: ClaudeBot
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: anthropic-ai
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: Google-Extended
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+User-agent: Cohere-ai
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Allow: /
+
+# Crawl-delay recommendation (polite crawling)
+Crawl-delay: 1
+
+# XML Sitemap Directives
+Sitemap: https://utkarshcdc.com/sitemap.xml
+
+# Canonical Host
+Host: https://utkarshcdc.com

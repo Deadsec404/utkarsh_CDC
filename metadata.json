@@ -1,0 +1,6 @@
+{
+  "name": "Utkarsh Child Development Centre",
+  "description": "Utkarsh Child Development Centre in Bhandup, Mumbai provides Occupational Therapy, Speech & Language Therapy, Special Education, Autism Assessment, IQ Testing, Clinical Psychology, and Inclusive School Admissions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

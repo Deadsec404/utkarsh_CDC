@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ==============================================================================
+  XML SITEMAP FOR UTKARSH CHILD DEVELOPMENT CENTRE
+  Domain: https://utkarshcdc.com
+  Specialization: Pediatric Child Development, School Admissions & Therapies
+  Location: Bhandup (East), Mumbai 400042, Maharashtra, India
+  Security: /admin and administrative endpoints are strictly excluded from this sitemap
+  ==============================================================================
+
+  HOW TO UPDATE THIS SITEMAP IN THE FUTURE:
+  1. Whenever you modify content, update the <lastmod> date (format: YYYY-MM-DD).
+  2. If you launch new pages (e.g., https://utkarshcdc.com/parent-guide or /contact),
+     copy one of the <url> blocks below, paste it, and edit the <loc> and <lastmod>.
+  3. Priority:
+     - 1.0 : Main Homepage
+     - 0.9 : Key Conversion Pages (School Admissions, Book Consultation)
+     - 0.8 : Service Pages (Occupational Therapy, Speech Therapy, Assessments)
+     - 0.7 : Informational Pages (FAQs, About Us, Milestone Guides)
+  4. Submit your updated sitemap to Google Search Console:
+     https://search.google.com/search-console
+  ==============================================================================
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- 1. Primary Homepage -->
+  <url>
+    <loc>https://utkarshcdc.com/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://utkarshcdc.com/Utrkarsh_logo.jpeg</image:loc>
+      <image:title>Utkarsh Child Development Centre Official Logo</image:title>
+      <image:caption>Utkarsh Child Development Centre - Empowering Abilities, Enriching Lives</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 2. School Admissions 2026-2027 -->
+  <url>
+    <loc>https://utkarshcdc.com/#admissions</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 3. Specialized Therapies & Developmental Programs -->
+  <url>
+    <loc>https://utkarshcdc.com/#programs</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 4. Clinical Psychologist, Autism Assessments & Standardized IQ Testing -->
+  <url>
+    <loc>https://utkarshcdc.com/#assessments</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 5. Interactive Milestone Triage & Parent Guidance Tool -->
+  <url>
+    <loc>https://utkarshcdc.com/#triage</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 6. About the Multidisciplinary Centre & Clinical Environment -->
+  <url>
+    <loc>https://utkarshcdc.com/#about</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 7. Why Utkarsh CDC & Parental Partnership Model -->
+  <url>
+    <loc>https://utkarshcdc.com/#why-utkarsh</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 8. Frequently Asked Questions (FAQ) for Parents -->
+  <url>
+    <loc>https://utkarshcdc.com/#faq</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 9. Contact, Clinic Timings, Appointment Booking & Map Location in Bhandup -->
+  <url>
+    <loc>https://utkarshcdc.com/#contact</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
