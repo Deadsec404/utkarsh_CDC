@@ -121,9 +121,40 @@ You can also bind your custom domain (e.g., `www.utkarshcdc.com`) in the Cloudfl
 
 ---
 
-### Part 4: Cloudflare Pages (Git Integration) Build Settings
+### Part 4: Cloudflare Workers & Pages Build Settings
 
-If you connect your GitHub repository directly to **Cloudflare Pages**:
+#### If using Cloudflare Workers (Git Integration / Connected Repository):
+When your repository is connected to Cloudflare Worker **`utkarsh-cdc`**:
+
+1. **Root cause of the "empty build command / dist missing" error**:
+   - Cloudflare Workers Git trigger defaults to executing only `npx wrangler deploy`.
+   - Because `wrangler.toml` specifies `assets.directory = "./dist"`, Wrangler requires `./dist` to exist before uploading. If no build step runs first, the build fails because `./dist` was never generated.
+
+2. **Fix 1: Built directly into `wrangler.toml` (Already configured in repo!)**:
+   We added the `[build]` section directly into `wrangler.toml`:
+   ```toml
+   [build]
+   command = "npm run build"
+   ```
+   Now, whenever `npx wrangler deploy` runs, Wrangler **automatically runs `npm run build` first**, creating the `./dist` folder before uploading assets!
+
+3. **Fix 2: In Cloudflare Dashboard (Recommended)**:
+   - Go to your Worker: **`utkarsh-cdc`** → **Settings** → **Build**
+   - In the **Build command** field, enter:
+     ```bash
+     npm run build
+     ```
+   - Keep the **Deploy command** as:
+     ```bash
+     npx wrangler deploy
+     ```
+   - Click **Save settings**.
+   - Click **Retry build** (or push a new commit).
+
+---
+
+#### If using Cloudflare Pages (Git Integration):
+If you connect your GitHub repository to **Cloudflare Pages**:
 
 1. **Framework Preset**: `Vite`
 2. **Build Command**: `npm run build`
