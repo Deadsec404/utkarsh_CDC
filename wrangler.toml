@@ -33,7 +33,7 @@ not_found_handling = "single-page-application"
 [[d1_databases]]
 binding = "DB"
 database_name = "utkarsh_leads_db"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "08630206-3128-4df8-aeec-24f7ae557121"
 
 # ------------------------------------------------------------------------------
 # 3. Environment Variables (Public/Default settings)

@@ -77,13 +77,13 @@ database_name = "utkarsh_leads_db"
 database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 ```
 
-#### Step 3: Update `wrangler.toml`
-Open `wrangler.toml` and paste your `database_id` into the `[[d1_databases]]` section:
+#### Step 3: D1 Database Configured in `wrangler.toml`
+Your D1 database ID is already configured in `wrangler.toml`:
 ```toml
 [[d1_databases]]
 binding = "DB"
 database_name = "utkarsh_leads_db"
-database_id = "PASTE_YOUR_DATABASE_ID_HERE"
+database_id = "08630206-3128-4df8-aeec-24f7ae557121"
 ```
 
 #### Step 4: Run the Database Migration
