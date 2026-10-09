@@ -5,10 +5,26 @@
   --font-display: "Outfit", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: var(--font-sans);
   color: #1e293b;
   background-color: #f8fafc;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 

@@ -19,31 +19,31 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   const isFooter = size === 'footer' || size === 'xl';
   const isLg = size === 'lg';
 
-  // Responsive sizing presets: significantly increased size for navbar and footer
-  let imgContainerClass = 'w-13 h-13 sm:w-15 sm:h-15 md:w-16 md:h-16 rounded-2xl p-1';
-  let titleClass = 'text-2xl sm:text-2xl md:text-[26px]';
-  let subClass = 'text-xs sm:text-[12.5px] md:text-[13px]';
-  let dotClass = 'w-2 h-2';
+  // Responsive sizing presets: mobile-optimized for navbar, full for tablet/desktop
+  let imgContainerClass = 'w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl p-0.5 sm:p-1';
+  let titleClass = 'text-lg sm:text-2xl md:text-[26px]';
+  let subClass = 'text-[9.5px] sm:text-[12px] md:text-[13px]';
+  let dotClass = 'w-1.5 h-1.5 sm:w-2 sm:h-2';
 
   if (isSm) {
-    imgContainerClass = 'w-10 h-10 rounded-xl p-0.5';
-    titleClass = 'text-lg';
-    subClass = 'text-[10px] md:text-[11px]';
+    imgContainerClass = 'w-9 h-9 sm:w-10 sm:h-10 rounded-xl p-0.5';
+    titleClass = 'text-base sm:text-lg';
+    subClass = 'text-[9px] sm:text-[10px] md:text-[11px]';
     dotClass = 'w-1.5 h-1.5';
   } else if (isFooter) {
-    imgContainerClass = 'w-20 h-20 sm:w-24 sm:h-24 rounded-2xl sm:rounded-3xl p-1.5';
+    imgContainerClass = 'w-16 h-16 sm:w-24 sm:h-24 rounded-2xl sm:rounded-3xl p-1 sm:p-1.5';
     titleClass = 'text-2xl sm:text-3xl md:text-[32px]';
     subClass = 'text-xs sm:text-sm';
-    dotClass = 'w-2.5 h-2.5';
+    dotClass = 'w-2 sm:w-2.5 h-2 sm:h-2.5';
   } else if (isLg) {
-    imgContainerClass = 'w-16 h-16 sm:w-18 sm:h-18 rounded-2xl p-1';
-    titleClass = 'text-2xl sm:text-[28px]';
+    imgContainerClass = 'w-14 h-14 sm:w-18 sm:h-18 rounded-2xl p-1';
+    titleClass = 'text-xl sm:text-[28px]';
     subClass = 'text-xs sm:text-sm';
     dotClass = 'w-2 h-2';
   }
 
   return (
-    <div className={`inline-flex items-center gap-3 sm:gap-3.5 group ${className}`}>
+    <div className={`inline-flex items-center gap-2 sm:gap-3.5 group min-w-0 ${className}`}>
       {/* Official Utrkarsh_logo.jpeg */}
       <div
         className={`relative shrink-0 flex items-center justify-center bg-white shadow-xs border ${
@@ -59,7 +59,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       </div>
 
       {variant !== 'symbol-only' && (
-        <div className="flex flex-col text-left">
+        <div className="flex flex-col text-left min-w-0">
           <div className="flex items-center gap-1.5">
             <span
               className={`font-black tracking-tight leading-none uppercase ${titleClass} ${

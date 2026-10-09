@@ -31,22 +31,25 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
   return (
     <header className="sticky top-0 z-40 w-full transition-all duration-300">
       {/* Top Pre-Header Announcement Strip */}
-      <div className="bg-gradient-to-r from-[#0f3460] via-teal-900 to-[#1e1b4b] text-white text-xs py-2 px-4 sm:px-6 relative overflow-hidden border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-[#0f3460] via-teal-900 to-[#1e1b4b] text-white text-xs py-2 px-3 sm:px-6 relative overflow-hidden border-b border-white/10 w-full">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
           {/* Announcement with glowing indicator */}
-          <div className="flex items-center gap-2 min-w-0 truncate">
+          <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
             <span className="flex h-2 w-2 rounded-full bg-amber-400 animate-ping shrink-0" />
-            <span className="font-semibold text-amber-300 shrink-0">Admissions Open 2026–27:</span>
-            <span className="text-slate-200 truncate hidden sm:inline">
+            <span className="font-semibold text-amber-300 text-[11px] sm:text-xs shrink-0">
+              Admissions Open 2026–27
+            </span>
+            <span className="text-slate-300 hidden sm:inline">|</span>
+            <span className="text-slate-200 truncate hidden md:inline">
               Early Intervention & Therapies in Bhandup (E), Mumbai
             </span>
           </div>
 
           {/* Quick Connect & Instagram */}
-          <div className="flex items-center gap-3 sm:gap-4 shrink-0 text-[11px] font-medium">
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0 text-[11px] font-medium">
             <a
               href="tel:8828551185"
-              className="flex items-center gap-1.5 text-teal-300 hover:text-white transition-colors"
+              className="flex items-center gap-1 sm:gap-1.5 text-teal-300 hover:text-white transition-colors"
               title="Call Utkarsh CDC Helpdesk"
             >
               <Phone className="w-3 h-3 shrink-0" />
@@ -70,17 +73,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
       <div
         className={`w-full transition-all duration-200 ${
           scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200/90 py-3'
-            : 'bg-white/90 backdrop-blur-md border-b border-slate-200/80 py-3.5'
+            ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200/90 py-2.5 sm:py-3'
+            : 'bg-white/90 backdrop-blur-md border-b border-slate-200/80 py-3 sm:py-3.5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-2 sm:gap-4">
             
             {/* Zone 1: Brand Wordmark / Logo */}
             <a
               href="#"
-              className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 rounded-2xl shrink-0"
+              className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 rounded-2xl shrink min-w-0"
               aria-label="Utkarsh Child Development Centre Home"
             >
               <BrandLogo size="navbar" />
@@ -118,16 +121,25 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
             </nav>
 
             {/* Zone 3: Clean Primary Action CTA */}
-            <div className="flex items-center gap-3 shrink-0">
-              {/* Admissions CTA */}
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+              {/* Admissions CTA (Desktop & Tablet) */}
               <button
                 onClick={onOpenBooking}
-                className="inline-flex items-center gap-2 px-4.5 py-2.5 text-xs font-bold text-white bg-gradient-to-r from-rose-600 via-amber-600 to-rose-600 hover:from-rose-500 hover:to-amber-500 rounded-xl shadow-md hover:shadow-lg transition-all transform active:scale-95 whitespace-nowrap"
+                className="hidden md:inline-flex items-center gap-2 px-4.5 py-2.5 text-xs font-bold text-white bg-gradient-to-r from-rose-600 via-amber-600 to-rose-600 hover:from-rose-500 hover:to-amber-500 rounded-xl shadow-md hover:shadow-lg transition-all transform active:scale-95 whitespace-nowrap"
               >
                 <CalendarCheck className="w-4 h-4 text-white shrink-0" />
                 <span>School Admissions</span>
                 <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse shrink-0 hidden sm:inline" />
               </button>
+
+              {/* Mobile Quick Call Icon */}
+              <a
+                href="tel:8828551185"
+                className="md:hidden flex items-center justify-center w-9 h-9 rounded-xl bg-teal-50 text-teal-800 hover:bg-teal-100 transition-colors border border-teal-200/60"
+                aria-label="Call Utkarsh CDC Helpdesk"
+              >
+                <Phone className="w-4 h-4 text-teal-700" />
+              </a>
 
               {/* Mobile / Tablet Menu Toggle */}
               <button

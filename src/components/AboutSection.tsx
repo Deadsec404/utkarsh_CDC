@@ -43,17 +43,17 @@ export const AboutSection: React.FC = () => {
               </p>
 
               {/* Statistics & Credibility metrics with mixed vibrant colors */}
-              <div className="mt-8 pt-6 border-t border-white/15 grid grid-cols-3 gap-2.5 sm:gap-3 text-center">
-                <div className="p-3 sm:p-3.5 rounded-2xl bg-white/10 backdrop-blur-md">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-black text-amber-300">8+</div>
+              <div className="mt-8 pt-6 border-t border-white/15 grid grid-cols-3 gap-2 sm:gap-3 text-center">
+                <div className="p-2 sm:p-3.5 rounded-2xl bg-white/10 backdrop-blur-md">
+                  <div className="text-lg sm:text-2xl lg:text-3xl font-black text-amber-300">8+</div>
                   <div className="text-[10px] sm:text-xs text-slate-300 font-semibold mt-1">Core Therapies</div>
                 </div>
-                <div className="p-3 sm:p-3.5 rounded-2xl bg-white/10 backdrop-blur-md">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-black text-teal-300">1 : 1</div>
+                <div className="p-2 sm:p-3.5 rounded-2xl bg-white/10 backdrop-blur-md">
+                  <div className="text-lg sm:text-2xl lg:text-3xl font-black text-teal-300">1 : 1</div>
                   <div className="text-[10px] sm:text-xs text-slate-300 font-semibold mt-1">Personal Care</div>
                 </div>
-                <div className="p-3 sm:p-3.5 rounded-2xl bg-white/10 backdrop-blur-md">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-black text-rose-300">100%</div>
+                <div className="p-2 sm:p-3.5 rounded-2xl bg-white/10 backdrop-blur-md">
+                  <div className="text-lg sm:text-2xl lg:text-3xl font-black text-rose-300">100%</div>
                   <div className="text-[10px] sm:text-xs text-slate-300 font-semibold mt-1">Child Safe</div>
                 </div>
               </div>

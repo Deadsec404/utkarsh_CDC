@@ -116,7 +116,7 @@ export default function App() {
   // Public Website: 100% Clean, No Staff/Admin buttons visible
   // ---------------------------------------------------------------------------
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-teal-100 selection:text-teal-900 pb-16 sm:pb-0">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-teal-100 selection:text-teal-900 pb-20 sm:pb-0">
       {/* Skip to Main Content for Accessibility */}
       <a
         href="#main-content"
@@ -131,7 +131,7 @@ export default function App() {
       />
 
       {/* Main Content Sections */}
-      <main id="main-content" className="flex-1">
+      <main id="main-content" className="flex-1 w-full max-w-full overflow-x-hidden">
         {/* Hero Section */}
         <Hero onOpenBooking={() => handleOpenBooking('School Admission Inquiry')} />
 
@@ -176,15 +176,15 @@ export default function App() {
         presetService={selectedService}
       />
 
-      {/* Floating Bottom Quick-Action Dock for Mobile Users */}
+      {/* Floating Bottom Quick-Action Dock for Mobile Users with iOS Safe Area support */}
       <aside
         aria-label="Quick Mobile Actions"
-        className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 shadow-2xl block sm:hidden"
+        className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 px-3 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] shadow-2xl block sm:hidden"
       >
         <div className="grid grid-cols-3 gap-2">
           <a
             href="tel:8828551185"
-            className="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl bg-slate-100 text-slate-800 text-[11px] font-bold active:bg-slate-200"
+            className="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-bold active:bg-slate-200 transition-colors"
           >
             <Phone className="w-3.5 h-3.5 text-teal-600 shrink-0" />
             <span>Call</span>
@@ -192,7 +192,7 @@ export default function App() {
 
           <button
             onClick={handleWhatsApp}
-            className="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px] font-bold active:bg-emerald-100"
+            className="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-[11px] font-bold active:bg-emerald-100 transition-colors"
           >
             <MessageSquare className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
             <span>WhatsApp</span>
@@ -200,7 +200,7 @@ export default function App() {
 
           <button
             onClick={() => handleOpenBooking('School Admission Inquiry')}
-            className="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl bg-gradient-to-r from-rose-600 to-amber-600 text-white text-[11px] font-bold shadow-xs active:opacity-90"
+            className="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-gradient-to-r from-rose-600 to-amber-600 text-white text-[11px] font-bold shadow-xs active:opacity-90 transition-opacity"
           >
             <CalendarCheck className="w-3.5 h-3.5 text-white shrink-0" />
             <span>Admissions</span>
